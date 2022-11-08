@@ -20,7 +20,7 @@ public:
 	{
 		for (int i = 0; i < SIZE; ++i)
 		{
-			grid.emplace_back(std::vector<char>(SIZE,'-'));
+			grid.emplace_back(std::vector<char>(SIZE,' '));
 		}
 	}
 
@@ -36,7 +36,7 @@ public:
 
 	bool IsPosEmpty(int row, int col)
 	{
-		return grid[row][col] == '-';
+		return grid[row][col] == ' ';
 	}
 
 	void PutRobotInPos(char robot, int row, int col)
@@ -91,7 +91,7 @@ public:
 
 	void ClearRobotPos(int r, int c)
 	{
-		pBoard->PutRobotInPos('-', r, c);
+		pBoard->PutRobotInPos(' ', r, c);
 	}
 };
 
